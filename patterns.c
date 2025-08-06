@@ -1,4 +1,5 @@
 #include "conway.h"
+#include <time.h>
 #include <stdlib.h>
 
 void init_glider(char* grid, int x, int y) {
@@ -10,6 +11,8 @@ void init_glider(char* grid, int x, int y) {
 }
 
 void init_random(char* grid) {
+    srand(time(NULL));
+
     for (int y=0; y<GRID_HEIGHT; y++) {
         for (int x=0; x<GRID_WIDTH; x++) {
             char state = DEAD;
